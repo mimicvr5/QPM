@@ -1,4 +1,7 @@
+package qpm;
+
 import java.util.*;
+import qpm.lexing.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -7,14 +10,25 @@ public class Main {
         System.out.println("Q+- V1.0:");
         System.out.println("Type 'exit' to quit.\n");
 
-        String line;
         while (true) {
             System.out.print("> ");
-            line = scanner.nextLine();
+            String line = scanner.nextLine();
+
             if (Objects.equals(line, "exit")) {
                 break;
             }
-            System.out.println(line);
+
+            Lexer tokenizer = new Lexer(line);
+            List<Token> tokens = tokenizer.tokenize();
+
+            System.out.println("Tokens:");
+            for (Token token : tokens) {
+                System.out.println(token);
+            }
+
+            System.out.println();
         }
+
+        scanner.close();
     }
 }

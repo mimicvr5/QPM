@@ -20,10 +20,10 @@ All source files use the `.qpm` extension.
 ## Syntax Guide
 
 ### Entry Point
-Every Q+- program begins in a `main` function with return type `none`:
+Every Q+- program begins in a `qpm` function with return type `none`:
 
 ```qpm
-public none main() {
+public none qpm() {
     print("Hello, Q+-!");
 }
 ```
@@ -97,7 +97,7 @@ package com.example;
 
 import utils.MathHelper;
 
-public none main() {
+public none qpm() {
     int result = MathHelper.square(5);
     print("Result = " + result);
 }
