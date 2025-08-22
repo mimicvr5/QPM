@@ -5,6 +5,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Q+- V1.0:");
+        System.out.println("Type 'exit' to quit.\n");
 
         String line;
         while (true) {
